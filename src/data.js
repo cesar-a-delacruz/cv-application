@@ -3,17 +3,31 @@ export default {
         {
             id: 1,
             name: 'General Information',
-            info: null,
+            info: {
+                fullName: null,
+                email: null,
+                phoneNumber: null,
+            },
         },
         {
             id: 2,
             name: 'Educational Experience',
-            info: null,
+            info: {
+                schoolName: null,
+                title: null,
+                date: null
+            },
         },
         {
             id: 3,
             name: 'Practical Experience',
-            info: null,
+            info: {
+                companyName: null,
+                positionTitle: null,
+                mainResponsabilities: null,
+                from: null,
+                until: null,
+            },
         },
     ]
 }
