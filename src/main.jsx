@@ -7,17 +7,7 @@ import Content from './components/Content'
 import Navigation from './components/Navigation'
 
 function App() {
-  const [section, setSection] = useState(
-    {
-      content: data.sections.find(section => section.id === 1),
-      type: 'form'
-    }
-  )
-  function changeContent(sectionId) {
-    setSection(data.sections.find(section => section.id === sectionId))
-    setSection({...section, content: data.sections.find(section => section.id === sectionId)})
-  }
-
+  const [section, setSection] = useState(data.sections.find(section => section.id === 1))
   return (
     <>
       <header>
@@ -25,11 +15,15 @@ function App() {
         <Navigation sections={data.sections} changeContent={changeContent} />
       </header>
       <main>
-        <h2>{section.content.name}</h2>
+        <h2>{section.name}</h2>
         <Content section={section} />
       </main>
     </>
   )
+  
+  function changeContent(sectionId) {
+    setSection(data.sections.find(section => section.id === sectionId))
+  }
 }
 
 createRoot(document.getElementById('root')).render(
