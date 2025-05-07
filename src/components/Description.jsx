@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-export default function Description({info}) {
+export default function Description({info, changeType}) {
     return (
         <div>
             {Object.keys(info).map(infoItem => {
@@ -12,7 +12,10 @@ export default function Description({info}) {
                 </div>
                 )
             })}
-            <button>Edit</button>
+            <button onClick={(e) => {
+                changeType('form')
+            }}
+            >Edit</button>
         </div>
     )
 }
