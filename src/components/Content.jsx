@@ -1,19 +1,13 @@
-import * as _ from 'lodash';
-export default function Content({info}) {
+import { useState } from 'react';
+import Form from './Form';
+import Description from './Description';
+export default function Content({section}) {
     return (
         <div className="content">
-            <form>
-                {Object.keys(info).map(infoItem => {
-                    return (
-                    <>
-                        <label for={_.kebabCase(infoItem)}>{_.startCase(infoItem)}</label>
-                        <input type="text" id={_.kebabCase(infoItem)} />
-                        <br/>
-                    </>
-                    )
-                })}
-                <button type='submit'>Save</button>
-            </form>
+            {(() => {
+                if (section.type === 'form') return <Form info={section.content.info} />
+                else if (section.type === 'description') return <Description info={section.content.info} />
+            })()}
         </div>
     )
 }
