@@ -1,10 +1,10 @@
-export default function Navigation({sections, changeSection}) {
+export default function Navigation({sections, changeContent}) {
     return (
         <nav>
             <ul>
                 {sections.map(section => 
                     <li key={section.id}
-                    onClick={() => changeSection(section.id)}
+                    onClick={() => changeContent(section.id)}
                     >
                         {section.name}
                     </li>

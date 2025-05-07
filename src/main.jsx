@@ -7,20 +7,26 @@ import Content from './components/Content'
 import Navigation from './components/Navigation'
 
 function App() {
-  const [section, setSection] = useState(data.sections.find(section => section.id === 1))
-  function changeSection(sectionId) {
+  const [section, setSection] = useState(
+    {
+      content: data.sections.find(section => section.id === 1),
+      type: 'form'
+    }
+  )
+  function changeContent(sectionId) {
     setSection(data.sections.find(section => section.id === sectionId))
+    setSection({...section, content: data.sections.find(section => section.id === sectionId)})
   }
 
   return (
     <>
       <header>
         <h1>CV Generator</h1>
-        <Navigation sections={data.sections} changeSection={changeSection} />
+        <Navigation sections={data.sections} changeContent={changeContent} />
       </header>
       <main>
-        <h2>{section.name}</h2>
-        <Content info={section.info}/>
+        <h2>{section.content.name}</h2>
+        <Content section={section} />
       </main>
     </>
   )
