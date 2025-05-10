@@ -13,8 +13,8 @@ export default function Form({info,  changeType, changeContent}) {
                 Object.defineProperty(newInfo, _.camelCase(input.id), {value: input.value})
             });
             if (complete) {
-                changeType('description')
                 changeContent(undefined, newInfo)
+                changeType('description')
             }
             else alert('You have empty fields.');
             e.preventDefault()
