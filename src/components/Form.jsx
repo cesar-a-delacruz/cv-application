@@ -1,21 +1,26 @@
 import * as _ from 'lodash';
-export default function Form({info, changeType}) {
+export default function Form({info,  changeType, changeContent}) {
     return (
         <form onSubmit={(e) => {
-            e.preventDefault()
             const inputs = document.querySelectorAll('input')
             let complete = true
+            const newInfo = {}
             inputs.forEach(input => {
                 if (!input.value) {
                     complete = false
                     return
                 }
+                Object.defineProperty(newInfo, _.camelCase(input.id), {value: input.value})
             });
-            if (complete) changeType('description')
-            else alert('You have empty fields.')
+            if (complete) {
+                changeType('description')
+                changeContent(undefined, newInfo)
+            }
+            else alert('You have empty fields.');
+            e.preventDefault()
         }}
         >
-            {Object.keys(info).map(infoItem => {
+            {Object.getOwnPropertyNames(info).map(infoItem => {
                 return (
                 <div key={infoItem}>
                     <label htmlFor={_.kebabCase(infoItem)}>{_.startCase(infoItem)}</label>

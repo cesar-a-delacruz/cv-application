@@ -2,7 +2,7 @@ import * as _ from 'lodash';
 export default function Description({info, changeType}) {
     return (
         <div>
-            {Object.keys(info).map(infoItem => {
+            {Object.getOwnPropertyNames(info).map(infoItem => {
                 return (
                 <div key={infoItem}>
                     <h3>{_.startCase(infoItem)}</h3>

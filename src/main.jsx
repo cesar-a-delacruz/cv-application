@@ -16,13 +16,17 @@ function App() {
       </header>
       <main>
         <h2>{section.name}</h2>
-        <Content section={section} />
+        <Content section={section} changeContent={changeContent} />
       </main>
     </>
   )
   
-  function changeContent(sectionId) {
-    setSection(data.sections.find(section => section.id === sectionId))
+  function changeContent(sectionId, newInfo) {
+    if (!sectionId && newInfo) {
+      setSection({...section, info: newInfo})
+    } else {
+      setSection(data.sections.find(section => section.id === sectionId));
+    }
   }
 }
 
