@@ -10,12 +10,13 @@ export default function Description({info, changeType}) {
                     <p>{info[infoItem]}</p>
                     <br/>
                 </div>
-                )
+                );
             })}
             <button onClick={(e) => {
-                changeType('form')
-            }}
-            >Edit</button>
+                changeType('form');
+            }}>
+                Edit
+            </button>
         </div>
     )
 }

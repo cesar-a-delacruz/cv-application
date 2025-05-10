@@ -16,18 +16,17 @@ function App() {
       </header>
       <main>
         <h2>{section.name}</h2>
-        <Content section={section} changeContent={changeContent} />
+        <Content section={section} updateInfo={updateInfo} />
       </main>
     </>
   )
   
-  function changeContent(sectionId, newInfo) {
-    if (!sectionId && newInfo) {
-      setSection({...section, info: newInfo})
-      sectionsHandler.update(section.id, newInfo);
-    } else {
-      setSection(sectionsHandler.read(sectionId));
-    }
+  function changeContent(id) {
+    setSection(sectionsHandler.read(id));
+  }
+  function updateInfo(newInfo) {
+    sectionsHandler.update(section.id, newInfo);
+    setSection({...section, info: newInfo});
   }
 }
 
