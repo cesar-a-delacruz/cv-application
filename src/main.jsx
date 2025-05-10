@@ -24,6 +24,9 @@ function App() {
   function changeContent(sectionId, newInfo) {
     if (!sectionId && newInfo) {
       setSection({...section, info: newInfo})
+      data.sections.forEach((sec, i, arr) => {
+        if (sec.id === section.id) arr[i].info = newInfo
+      })
     } else {
       setSection(data.sections.find(section => section.id === sectionId));
     }

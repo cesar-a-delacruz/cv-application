@@ -24,7 +24,7 @@ export default function Form({info,  changeType, changeContent}) {
                 return (
                 <div key={infoItem}>
                     <label htmlFor={_.kebabCase(infoItem)}>{_.startCase(infoItem)}</label>
-                    <input type="text" id={_.kebabCase(infoItem)} />
+                    <input type="text" id={_.kebabCase(infoItem)} defaultValue={info[infoItem] ? info[infoItem] : ''} />
                     <br/>
                 </div>
                 )
