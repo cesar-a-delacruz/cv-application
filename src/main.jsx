@@ -18,6 +18,18 @@ function App() {
         <h2>{section.name}</h2>
         <Content section={section} updateInfo={updateInfo} />
       </main>
+      <footer>
+        <p>
+          Image by 
+          <a href="https://pixabay.com/users/olilynch-3815693/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3726428">
+            Oli Lynch
+          </a> 
+          from 
+          <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3726428">
+            Pixabay
+          </a>
+        </p>
+      </footer>
     </>
   )
   

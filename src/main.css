@@ -17,5 +17,24 @@ div#root > * {
 header {
     background-color: darkslateblue;
     color: white;
-    width: 100%;
+}
+
+main {  
+    background-image: linear-gradient(rgba(72, 61, 140, 0.20)), url(./res/resume.jpg);
+    background-size: cover;
+    min-height: 90vh;
+}
+
+footer {
+    background-color: darkslateblue;
+    color: white;
+}
+
+a {
+    color: rgb(155, 140, 255);
+    margin: 5px;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
