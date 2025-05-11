@@ -1,3 +1,4 @@
+import '../styles/navigation.css';
 export default function Navigation({sections, changeContent}) {
     return (
         <nav>
