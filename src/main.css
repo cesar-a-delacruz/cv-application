@@ -1,1 +1,14 @@
-@import 'normalize.css'
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+div#root {
+    font-family: "Merriweather", Arial, Helvetica, sans-serif;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+div#root > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
