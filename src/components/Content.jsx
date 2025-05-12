@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../styles/content.css';
 import Form from './Form';
 import Description from './Description';
 

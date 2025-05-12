@@ -16,11 +16,3 @@ form input {
     padding: 2%;
     border: 1px grey solid;
 }   
-form button {
-    align-self: center;
-    padding: 3% 6%;
-    width: max-content;
-    border-style: none;
-    background-color: darkslateblue;
-    color: white;
-}

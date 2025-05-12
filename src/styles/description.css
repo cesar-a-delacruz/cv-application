@@ -11,14 +11,6 @@ div.description p {
     margin: 0;
     min-width: max-content;
 }
-div.description button {
-    align-self: center;
-    padding: 2% 4%;
-    width: max-content;
-    border-style: none;
-    background-color: darkslateblue;
-    color: white;
-}
 div.description > button:focus {
     outline-color: rgb(126, 108, 246);
 }

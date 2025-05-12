@@ -1,0 +1,8 @@
+form button, div.description button {
+    align-self: center;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    border-style: none;
+    background-color: darkslateblue;
+    color: white;
+}
