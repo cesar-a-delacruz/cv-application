@@ -2,6 +2,10 @@
 ## Description
 In this project, i have created a small application where users can input their information and generate a CV/résumé.
 
+### Screenshot
+
+![screenshot](./public/screenshot.png)
+
 ## Steps
 1. Created a new React project.
 
