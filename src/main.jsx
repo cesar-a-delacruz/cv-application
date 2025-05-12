@@ -20,14 +20,18 @@ function App() {
           <Content section={section} updateInfo={updateInfo} />
         </div>
       </main>
-      <footer>
+      <footer aria-label='image credits'>
         <p>
           Image by 
-          <a href="https://pixabay.com/users/olilynch-3815693/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3726428">
+          <a href="https://pixabay.com/users/olilynch-3815693/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3726428"
+          aria-label='Oli Lynch artist'
+          >
             Oli Lynch
           </a> 
           from 
-          <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3726428">
+          <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3726428" 
+          aria-label='Pixabay website'
+          >
             Pixabay
           </a>
         </p>
