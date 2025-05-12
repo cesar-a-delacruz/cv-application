@@ -7,17 +7,18 @@ import Content from './components/Content'
 import Navigation from './components/Navigation'
 
 function App() {
-  const [section, setSection] = useState(sectionsHandler.read(1))
+  const [section, setSection] = useState(sectionsHandler.read(1));
+  const [type, setType] = useState('form');
   return (
     <>
       <header>
         <h1>CV Generator</h1>
-        <Navigation sections={sectionsHandler.readAll()} changeContent={changeContent} />
+        <Navigation sections={sectionsHandler.readAll()} changeContent={changeContent} changeType={changeType} />
       </header>
       <main>
         <div>
           <h2>{section.name}</h2>
-          <Content section={section} updateInfo={updateInfo} />
+          <Content section={section} type={type} changeType={changeType}/>
         </div>
       </main>
       <footer aria-label='image credits'>
@@ -41,6 +42,10 @@ function App() {
   
   function changeContent(id) {
     setSection(sectionsHandler.read(id));
+  }
+  function changeType(sectionType, info) {
+      if (info) updateInfo(info);
+      setType(sectionType);
   }
   function updateInfo(newInfo) {
     sectionsHandler.update(section.id, newInfo);

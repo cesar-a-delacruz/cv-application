@@ -3,8 +3,7 @@ import '../styles/content.css';
 import Form from './Form';
 import Description from './Description';
 
-export default function Content({section, updateInfo}) {
-    const [type, setType] = useState('form');
+export default function Content({section, type, changeType}) {
     return (
         <>
             {(() => {
@@ -16,14 +15,8 @@ export default function Content({section, updateInfo}) {
         </>
     );
 
-    function changeType(sectionType, info) {
-        if (info) updateInfo(info);
-        setType(sectionType);
-    }
     function isInfoFull(info) {
-        let answer = false;
-        const firstInfo = Object.getOwnPropertyNames(info)[0];
-        if (info[firstInfo]) answer = true;
-        return answer;
+        if (info[Object.getOwnPropertyNames(info)[0]]) return true;
+        else return false;
     }
 }
