@@ -1,0 +1,28 @@
+div.description, div.description > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+div.description p {
+    padding: 2%;
+    border: 1px rgb(182, 181, 181) solid;
+    margin: 0;
+    min-width: max-content;
+}
+div.description button {
+    align-self: center;
+    padding: 2% 4%;
+    width: max-content;
+    border-style: none;
+    background-color: darkslateblue;
+    color: white;
+}
+div.description > button:focus {
+    outline-color: rgb(126, 108, 246);
+}
+
+div.description button, div.description p {
+    border-radius: 7px;
+}

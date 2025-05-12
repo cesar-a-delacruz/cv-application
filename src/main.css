@@ -30,6 +30,7 @@ main > div {
     justify-content: center;
     align-items: center;
     width: 20vw;
+    min-width: fit-content;
     margin: 4%;
     background-color: white;
     padding: 2%;
