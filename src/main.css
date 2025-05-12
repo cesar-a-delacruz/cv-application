@@ -22,7 +22,7 @@ header {
 main {  
     background-image: linear-gradient(rgba(72, 61, 140, 0.20)), url(./res/resume.jpg);
     background-size: cover;
-    min-height: 90vh;
+    min-height: 81vh;
 }
 main > div {
     display: flex;
