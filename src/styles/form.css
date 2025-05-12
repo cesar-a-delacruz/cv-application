@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+form > * {
+    border-radius: 7px;
+}
+form > *:focus {
+    outline-color: rgb(126, 108, 246);
+}
+
+form input {
+    max-width: 100%;
+    padding: 2%;
+    border: 1px grey solid;
+}   
+form button {
+    align-self: center;
+    padding: 3% 6%;
+    width: max-content;
+    border-style: none;
+    background-color: darkslateblue;
+    color: white;
+}

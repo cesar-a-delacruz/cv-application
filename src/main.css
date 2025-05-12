@@ -24,6 +24,17 @@ main {
     background-size: cover;
     min-height: 90vh;
 }
+main > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    margin: 4%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 15px;
+}
 
 footer {
     background-color: darkslateblue;
