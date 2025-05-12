@@ -5,4 +5,8 @@ form button, div.description button {
     border-style: none;
     background-color: darkslateblue;
     color: white;
+    border-radius: 7px;
+}
+form button:focus, div.description button:focus {
+    outline-color: rgb(126, 108, 246);
 }
