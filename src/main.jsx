@@ -15,8 +15,10 @@ function App() {
         <Navigation sections={sectionsHandler.readAll()} changeContent={changeContent} />
       </header>
       <main>
-        <h2>{section.name}</h2>
-        <Content section={section} updateInfo={updateInfo} />
+        <div>
+          <h2>{section.name}</h2>
+          <Content section={section} updateInfo={updateInfo} />
+        </div>
       </main>
       <footer>
         <p>
