@@ -2,8 +2,9 @@
 ## Description
 In this project, i have created a small application where users can input their information and generate a CV/résumé.
 
-### Screenshot
+**[Check it here](https://cesar-a-delacruz-cv-application.netlify.app/)**
 
+### Screenshot
 ![screenshot](./public/screenshot.png)
 
 ## Steps
